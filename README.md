@@ -82,4 +82,5 @@ Solved puzzle
 100% brute force solver would have to check 883,702,234,255,196,160 (or 8.8E17 positions). Intruducing a basic
 constraint - if a combination of piece positions already has a clash where two balls occupy the same space,
 then no further checking will be done on this combination - pares down this number to 52.6 million. This number
-can be searched on a modern MacBook Pro laptop in less than 2 minutes.
+can be searched on a modern MacBook Pro laptop in less than 2 minutes. To search the entire space at this rate
+would have taken more than 57 thousand years.
