@@ -44,8 +44,7 @@ class Organism
     Position p = new Position();
     for(int i = 0; i < 9; i++)
     {
-      int adj = i > 5 ? 5 : i;
-      p.merge(PositionFactory.positions.get(adj).get(selection[i]));
+      p.merge(PositionFactory.positions.get(i).get(selection[i]));
     }
     position = p;
 

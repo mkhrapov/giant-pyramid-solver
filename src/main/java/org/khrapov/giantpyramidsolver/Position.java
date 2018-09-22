@@ -113,4 +113,18 @@ class Position
 
     return count;
   }
+
+
+  Position convert6To(int n)
+  {
+    Position p = new Position();
+    for(int i = 0; i < SIZE; i++)
+    {
+      if(this.occupied[i] == 6)
+      {
+        p.occupied[i] = n;
+      }
+    }
+    return p;
+  }
 }

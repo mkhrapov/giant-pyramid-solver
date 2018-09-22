@@ -42,11 +42,6 @@ class BasicConstraintSolver
       return;
     }
 
-    if(i > 5)
-    {
-      i = 5;
-    }
-
     counter++;
 
     for(Position next : PositionFactory.positions.get(i))

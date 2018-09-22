@@ -1,5 +1,5 @@
 # Giant Pyramid Solver
-This is a solver and the solution for the Giant Pyramid puzzle
+This is a repository for some solvers and the solution for the Giant Pyramid puzzle
 
 I bought mine around 2000. As of 2017 it is no longer sold. There is
 some description of the puzzle on this page: http://www.gamepuzzles.com/giantpyr.htm

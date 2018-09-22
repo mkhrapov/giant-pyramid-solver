@@ -17,7 +17,7 @@ class PositionFactory
 
   static
   {
-    for(int i = 0; i < 6; i++)
+    for(int i = 0; i < 9; i++)
     {
       positions.add(new ArrayList<Position>());
     }
@@ -153,6 +153,20 @@ class PositionFactory
       }
     }
 
+    // Lists 6, 7, 8 should have the same positions as list 5
+
+    List<Position> l5 = positions.get(5);
+    List<Position> l6 = positions.get(6);
+    List<Position> l7 = positions.get(7);
+    List<Position> l8 = positions.get(8);
+
+    for(Position p : l5)
+    {
+      l6.add(p.convert6To(7));
+      l7.add(p.convert6To(8));
+      l8.add(p.convert6To(9));
+    }
+
     System.out.printf("Total count of planar positions is %d%n", count);
   }
 
@@ -215,7 +229,7 @@ class PositionFactory
     {
       if(fingerPrintMatch(distances, knownDistances[n]))
       {
-        positions.get(n).add(new Position(n, i, j, k, l));
+        positions.get(n).add(new Position(n+1, i, j, k, l));
         return;
       }
     }
