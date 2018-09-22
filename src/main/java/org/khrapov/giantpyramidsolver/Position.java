@@ -85,4 +85,32 @@ class Position
 
     return child;
   }
+
+
+  void merge(Position other)
+  {
+    for(int i = 0; i < SIZE; i++)
+    {
+      if(other.occupied[i] != 0)
+      {
+        this.occupied[i] = other.occupied[i];
+      }
+    }
+  }
+
+
+  int countNonZero()
+  {
+    int count = 0;
+
+    for(int i = 0; i < SIZE; i++)
+    {
+      if(occupied[i] != 0)
+      {
+        count++;
+      }
+    }
+
+    return count;
+  }
 }
