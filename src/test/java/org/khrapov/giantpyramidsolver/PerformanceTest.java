@@ -69,4 +69,27 @@ class PerformanceTest
     Solution: [1, 1, 1, 6, 4, 7, 9, 4, 4, 9, 4, 3, 3, 3, 3, 7, 7, 7, 6, 8, 9, 6, 2, 6, 2, 2, 5, 5, 8, 9, 2, 5, 8, 8, 5].
      */
   }
+
+
+  @Test
+  void hybridTest()
+  {
+    HybridSolver solver = new HybridSolver();
+
+    long start = System.nanoTime();
+    solver.solve();
+    long end = System.nanoTime();
+
+    System.out.printf("Calculation took %.2f seconds.%n", (end - start)/1_000_000_000.0);
+    Position solution = solver.getSolution();
+
+    if(solution != null)
+    {
+      System.out.printf("Solution: %s.%n", solution.toString());
+    }
+    else
+    {
+      System.out.println("Solution not found.");
+    }
+  }
 }

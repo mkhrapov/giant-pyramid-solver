@@ -79,6 +79,9 @@ Solved puzzle
 
 ## Solvers
 
+A good way to start reviewing my results would be to look at the unit tests. All of the solver are run
+from a JUnit 5 test method. 
+
 ### Basic Constraint Solver
 
 100% brute force solver would have to check 883,702,234,255,196,160 (or 8.8E17 positions). Intruducing a basic
@@ -90,3 +93,9 @@ would have taken more than 57 thousand years.
 ### Genetic Algorithm Solver
 
 In the few experiments that I ran with it, the genetic algorithm solver found the solution in 3 to 40 seconds.
+
+### Hybrid Solver
+
+I had high hopes for a hybrid solver that combined features from my genetic algorithm solver and the constraint
+solver. And in one of the runs I got lucky and it found a solution in under 2 sec. But this was not reproducible.
+In most cases it took it so long to find a solution that I would kill the run before then.

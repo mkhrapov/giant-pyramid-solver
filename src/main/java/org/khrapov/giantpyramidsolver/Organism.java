@@ -39,6 +39,20 @@ class Organism
   }
 
 
+  Organism specificMutant(int gene, int value)
+  {
+    Organism child = new Organism();
+    for(int i = 0; i < 9; i++)
+    {
+      child.selection[i] = this.selection[i];
+    }
+
+    child.selection[gene] = value;
+    child.calculateFitness();
+    return child;
+  }
+
+
   private void calculateFitness()
   {
     Position p = new Position();
